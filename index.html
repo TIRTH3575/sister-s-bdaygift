@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For silly billy sista!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 📂 Archive Button -->
+    <button class="menu-btn" onclick="toggleMenu()">📂 Old Memories</button>
+
+    <div class="memory-panel" id="memoryPanel">
+        <h2>Old Memories 🤍</h2>
+
+        <div class="memory-tabs">
+            <button onclick="showArchive('smile')">Smile</button>
+            <button onclick="showArchive('miss')">Miss</button>
+            <button onclick="showArchive('here')">here</button>
+        </div>
+
+        <div class="memory-list" id="archive">
+            <p>Select a category 🤍</p>
+        </div>
+    </div>
+
+    <div class="curtain"></div>
+
+    <!-- ❄️ Snowflakes -->
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❅</div>
+    </div>
+
+    <!-- 💌 Content -->
+    <h2>Happy birthday!!!, this is for you sista!💌</h2>
+
+    <p class="intro">
+        I made this for you so you can come here whenever you miss me,
+        or just want to smile.
+    </p>
+
+    <div class="jars">
+        <button onclick="openJar('smile')">
+            When you made me smile
+            <span class="badge" id="badge-smile"></span>
+        </button>
+
+        <button onclick="openJar('miss')">
+            When I missed you
+            <span class="badge" id="badge-miss"></span>
+        </button>
+
+        <button onclick="openJar('here')">
+            why i wish you were here
+            <span class="badge" id="badge-here"></span>
+        </button>
+    </div>
+
+    <div class="note-box">
+        <p id="note">Pick a jar❤️</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
