@@ -14,7 +14,7 @@ h1 {
 .intro {
     max-width: 600px;
     margin: 0 auto 25px;
-    color: #666;
+    color: #ffffff;
     line-height: 1.5;
 }
 
@@ -196,4 +196,5 @@ body>*:not(.snowflakes):not(.curtain):not(.memory-panel) {
     overflow-y: auto;
     display: none;
 }
+
 
