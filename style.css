@@ -1,9 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    background: #e67ea1;
+    background: linear-gradient(180deg, #050814, #0b1026);
+    color: #eaeaff;
     text-align: center;
     padding: 20px;
     margin: 0;
+    min-height: 100vh;
 }
 
 h1 {
@@ -14,7 +16,7 @@ h1 {
 .intro {
     max-width: 600px;
     margin: 0 auto 25px;
-    color: #ffffff;
+    color: #666;
     line-height: 1.5;
 }
 
@@ -26,20 +28,14 @@ h1 {
 }
 
 .jars button {
-    position: relative;
-    background: #f43759;
-    border: none;
-    padding: 16px;
-    width: 100%;
-    max-width: 320px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.08);
+    color: #f1f1ff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
 }
 
 .jars button:active {
-    transform: scale(0.97);
-    background: #b01330;
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .badge {
@@ -53,84 +49,82 @@ h1 {
     display: none;
 }
 
+
+
 .note-box {
-    margin: 30px auto 0;
-    padding: 25px;
-    background: white;
-    border-radius: 20px;
-    max-width: 600px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background: rgba(10, 15, 40, 0.9);
+    color: #f2f2ff;
+    box-shadow: 0 0 30px rgba(120, 140, 255, 0.2);
 }
 
-.snowflakes {
+
+.shooting-stars {
     position: fixed;
     inset: 0;
     pointer-events: none;
     z-index: 3;
 }
 
-.snowflake {
+.star {
     position: absolute;
-    top: 130px;
-    color: rgb(91, 141, 205);
-    font-size: 1.8rem;
-    animation: fall 10s linear infinite;
+    top: -10%;
+    left: 50%;
+    width: 2px;
+    height: 120px;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.8));
+    animation: shoot 6s linear infinite;
+    opacity: 0.8;
 }
 
-.snowflake:nth-child(1) {
-    left: 10%;
+.star:nth-child(1) {
+    left: 20%;
+    animation-delay: 0s;
 }
 
-.snowflake:nth-child(2) {
-    left: 30%;
+.star:nth-child(2) {
+    left: 50%;
     animation-delay: 2s;
 }
 
-.snowflake:nth-child(3) {
-    left: 50%;
+.star:nth-child(3) {
+    left: 75%;
     animation-delay: 4s;
 }
 
-.snowflake:nth-child(4) {
-    left: 70%;
-    animation-delay: 1s;
-}
+@keyframes shoot {
+    0% {
+        transform: translateY(-100px) rotate(45deg);
+        opacity: 0;
+    }
 
-.snowflake:nth-child(5) {
-    left: 90%;
-    animation-delay: 3s;
-}
-
-@keyframes fall {
-    from {
-        transform: translateY(0) rotate(0deg);
+    10% {
         opacity: 1;
     }
 
-    to {
-        transform: translateY(120vh) rotate(360deg);
+    100% {
+        transform: translateY(120vh) rotate(45deg);
         opacity: 0;
     }
 }
 
-/* 🎀 Curtain */
 .curtain {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 120px;
-    background: linear-gradient(#d0304d, #e8426e);
+    background: radial-gradient(circle at top, #2a2f6b, transparent 70%);
     border-radius: 0 0 50% 50%;
     z-index: 2;
 }
+
 
 /* 📂 Side Menu */
 .menu-btn {
     position: fixed;
     top: 15px;
     right: 15px;
-    background: #9b122b;
+    background: #ffb3c1;
     border: none;
     padding: 10px 14px;
     border-radius: 20px;
@@ -139,11 +133,13 @@ h1 {
 }
 
 .archive-note {
-    background: #fff6f9;
+    background: rgba(255, 255, 255, 0.06);
+    color: #f0f0ff;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 8px;
 }
+
 
 body>*:not(.snowflakes):not(.curtain):not(.memory-panel) {
     position: relative;
@@ -156,10 +152,14 @@ body>*:not(.snowflakes):not(.curtain):not(.memory-panel) {
     right: 20px;
     width: 320px;
     height: 70vh;
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     padding: 15px;
+
+    background: rgba(15, 20, 50, 0.95);
+    color: #eaeaff;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 40px rgba(120, 140, 255, 0.25);
+
     display: none;
     flex-direction: column;
     z-index: 6;
@@ -168,6 +168,8 @@ body>*:not(.snowflakes):not(.curtain):not(.memory-panel) {
     transform: translateY(-10px);
     transition: opacity 0.25s ease, transform 0.25s ease;
 }
+
+
 
 .memory-panel.open {
     display: flex;
@@ -183,8 +185,9 @@ body>*:not(.snowflakes):not(.curtain):not(.memory-panel) {
 
 .memory-tabs button {
     flex: 1;
-    background: #ffcad4;
-    border: none;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     padding: 8px;
     border-radius: 15px;
     cursor: pointer;
@@ -196,5 +199,3 @@ body>*:not(.snowflakes):not(.curtain):not(.memory-panel) {
     overflow-y: auto;
     display: none;
 }
-
-
