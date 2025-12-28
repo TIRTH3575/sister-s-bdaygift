@@ -92,5 +92,4 @@ function showArchive(jar) {
         archive.appendChild(div);
     });
 }
-
 updateBadges();
