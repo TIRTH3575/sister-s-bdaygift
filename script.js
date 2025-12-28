@@ -6,7 +6,8 @@ const jars = {
     miss: [
         "When I feel a bit alone.",
         "when i miss the moments where we used to chat all ngiht lol.",
-        "when i sometimes see moon and remember how you also loved to see moon."
+        "when i sometimes see moon and remember how you also loved to see moon.",
+        "when i was walking in my room thinking about IIT i missed ya."
     ],
     here: [
         "i wish i could have pillow fights with you.",
@@ -91,4 +92,5 @@ function showArchive(jar) {
         archive.appendChild(div);
     });
 }
+
 updateBadges();
