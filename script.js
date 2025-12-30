@@ -1,7 +1,8 @@
 const jars = {
     smile: [
         "That time you said you love to make me smile i smiled HARD.",
-        "When you told me i am the best bro alive."
+        "When you told me i am the best bro alive.",
+        "tbh i was just thinking how much your happiness affects me and makes me happier lol so you better keep smiling :3"
     ],
     miss: [
         "When I feel a bit alone.",
@@ -93,3 +94,4 @@ function showArchive(jar) {
     });
 }
 updateBadges();
+
